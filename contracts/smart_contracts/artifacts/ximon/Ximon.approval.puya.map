@@ -1,0 +1,518 @@
+{
+  "version": 3,
+  "sources": [
+    "../../ximon/contract.py"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;AAKA;;;AACQ;;;;;;;;AAAc;;AAAd;;AAFR;;;AAAA;;AAAA;;;AAAA;;;;;;;;;;;;AAAA;;;AAAA;;;;;;AAAA;AAAA;AAIK;;AAAA;AAAA;AAAA;;AAAA;AAJL;;;AAAA;;;AAIK;;;AAAA;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAIA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;AAAA;AARL;;AAAA;;;;;;;;;AAAA;AAAA;AAIA;;;AAEsB;;AAAA;AAAW;;AAAA;AAAX;AAAP;AAAP;AAER;;;AAGQ;AAEY;;AACD;;;;;;;;AAHX;;;;;;;;;;AAAA;;;;AAAA;;;AAAA;",
+  "op_pc_offset": 0,
+  "pc_events": {
+    "1": {
+      "subroutine": "smart_contracts.ximon.contract.Ximon.approval_program",
+      "params": {},
+      "block": "smart_contracts.ximon.contract.Ximon.approval_program",
+      "stack_in": [],
+      "op": "intcblock 0 1"
+    },
+    "5": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "7": {
+      "op": "bnz main_after_if_else@2",
+      "stack_out": []
+    },
+    "10": {
+      "callsub": "smart_contracts.ximon.contract.Ximon.__init__",
+      "op": "callsub __init__"
+    },
+    "13": {
+      "block": "main_after_if_else@2",
+      "stack_in": [],
+      "callsub": "smart_contracts.ximon.contract.Ximon.__puya_arc4_router__",
+      "op": "callsub __puya_arc4_router__",
+      "defined_out": [
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0"
+      ]
+    },
+    "16": {
+      "op": "return",
+      "stack_out": []
+    },
+    "17": {
+      "subroutine": "smart_contracts.ximon.contract.Ximon.__init__",
+      "params": {},
+      "block": "__init__",
+      "stack_in": [],
+      "op": "proto 0 0"
+    },
+    "20": {
+      "op": "pushbytes \"access\""
+    },
+    "28": {
+      "op": "global CreatorAddress",
+      "defined_out": [
+        "\"access\"",
+        "new_state_value%0#0"
+      ],
+      "stack_out": [
+        "\"access\"",
+        "new_state_value%0#0"
+      ]
+    },
+    "30": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "31": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "32": {
+      "subroutine": "smart_contracts.ximon.contract.Ximon.__puya_arc4_router__",
+      "params": {},
+      "block": "__puya_arc4_router__",
+      "stack_in": [],
+      "op": "proto 0 1"
+    },
+    "35": {
+      "op": "txn NumAppArgs",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "37": {
+      "op": "bz __puya_arc4_router___bare_routing@6",
+      "stack_out": []
+    },
+    "40": {
+      "op": "pushbytess 0x705dd1ff 0x0d6d7abe // method \"sum(uint64,uint64)uint64\", method \"call_authorize()void\""
+    },
+    "52": {
+      "op": "txna ApplicationArgs 0",
+      "defined_out": [
+        "Method(call_authorize()void)",
+        "Method(sum(uint64,uint64)uint64)",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "Method(sum(uint64,uint64)uint64)",
+        "Method(call_authorize()void)",
+        "tmp%2#0"
+      ]
+    },
+    "55": {
+      "op": "match __puya_arc4_router___sum_route@2 __puya_arc4_router___call_authorize_route@3",
+      "stack_out": []
+    },
+    "61": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "62": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "63": {
+      "block": "__puya_arc4_router___sum_route@2",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%3#0"
+      ]
+    },
+    "65": {
+      "op": "!",
+      "defined_out": [
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%4#0"
+      ]
+    },
+    "66": {
+      "op": "assert // OnCompletion is NoOp",
+      "stack_out": []
+    },
+    "67": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%5#0"
+      ]
+    },
+    "69": {
+      "op": "assert // is not creating",
+      "stack_out": []
+    },
+    "70": {
+      "op": "txna ApplicationArgs 1"
+    },
+    "73": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "tmp%7#0",
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%7#0",
+        "tmp%8#0"
+      ]
+    },
+    "76": {
+      "callsub": "smart_contracts.ximon.contract.Ximon.sum",
+      "op": "callsub sum",
+      "defined_out": [
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "tmp%9#0"
+      ]
+    },
+    "79": {
+      "op": "pushbytes 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "tmp%9#0",
+        "0x151f7c75"
+      ]
+    },
+    "85": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "tmp%9#0"
+      ]
+    },
+    "86": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%10#0"
+      ],
+      "stack_out": [
+        "tmp%10#0"
+      ]
+    },
+    "87": {
+      "op": "log",
+      "stack_out": []
+    },
+    "88": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "89": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "90": {
+      "block": "__puya_arc4_router___call_authorize_route@3",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%11#0"
+      ],
+      "stack_out": [
+        "tmp%11#0"
+      ]
+    },
+    "92": {
+      "op": "!",
+      "defined_out": [
+        "tmp%12#0"
+      ],
+      "stack_out": [
+        "tmp%12#0"
+      ]
+    },
+    "93": {
+      "op": "assert // OnCompletion is NoOp",
+      "stack_out": []
+    },
+    "94": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%13#0"
+      ],
+      "stack_out": [
+        "tmp%13#0"
+      ]
+    },
+    "96": {
+      "op": "assert // is not creating",
+      "stack_out": []
+    },
+    "97": {
+      "callsub": "smart_contracts.ximon.contract.Ximon.call_authorize",
+      "op": "callsub call_authorize"
+    },
+    "100": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "101": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "102": {
+      "block": "__puya_arc4_router___bare_routing@6",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%15#0"
+      ],
+      "stack_out": [
+        "tmp%15#0"
+      ]
+    },
+    "104": {
+      "op": "bnz __puya_arc4_router___after_if_else@10",
+      "stack_out": []
+    },
+    "107": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%16#0"
+      ],
+      "stack_out": [
+        "tmp%16#0"
+      ]
+    },
+    "109": {
+      "op": "!",
+      "defined_out": [
+        "tmp%17#0"
+      ],
+      "stack_out": [
+        "tmp%17#0"
+      ]
+    },
+    "110": {
+      "op": "assert // is creating",
+      "stack_out": []
+    },
+    "111": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1"
+      ],
+      "stack_out": [
+        "1"
+      ]
+    },
+    "112": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "113": {
+      "block": "__puya_arc4_router___after_if_else@10",
+      "stack_in": [],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "114": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "115": {
+      "subroutine": "smart_contracts.ximon.contract.Ximon.sum",
+      "params": {
+        "a#0": "bytes",
+        "b#0": "bytes"
+      },
+      "block": "sum",
+      "stack_in": [],
+      "op": "proto 2 1"
+    },
+    "118": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "a#0 (copy)"
+      ],
+      "stack_out": [
+        "a#0 (copy)"
+      ]
+    },
+    "120": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "121": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "b#0 (copy)",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "b#0 (copy)"
+      ]
+    },
+    "123": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%0#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "tmp%1#0"
+      ]
+    },
+    "124": {
+      "op": "+",
+      "defined_out": [
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0"
+      ]
+    },
+    "125": {
+      "op": "itob",
+      "defined_out": [
+        "val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%0#0"
+      ]
+    },
+    "126": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "127": {
+      "subroutine": "smart_contracts.ximon.contract.Ximon.call_authorize",
+      "params": {},
+      "block": "call_authorize",
+      "stack_in": [],
+      "op": "proto 0 0"
+    },
+    "130": {
+      "op": "itxn_begin"
+    },
+    "131": {
+      "op": "global CreatorAddress",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "133": {
+      "op": "pushint 724672968 // 724672968",
+      "defined_out": [
+        "724672968",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "724672968"
+      ]
+    },
+    "139": {
+      "op": "itxn_field ApplicationID",
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "141": {
+      "op": "pushbytes 0x73bc6501 // method \"authorize(address)void\"",
+      "defined_out": [
+        "Method(authorize(address)void)",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "Method(authorize(address)void)"
+      ]
+    },
+    "147": {
+      "op": "itxn_field ApplicationArgs",
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "149": {
+      "op": "itxn_field ApplicationArgs",
+      "stack_out": []
+    },
+    "151": {
+      "op": "pushint 6 // appl",
+      "defined_out": [
+        "appl"
+      ],
+      "stack_out": [
+        "appl"
+      ]
+    },
+    "153": {
+      "op": "itxn_field TypeEnum",
+      "stack_out": []
+    },
+    "155": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "156": {
+      "op": "itxn_field Fee",
+      "stack_out": []
+    },
+    "158": {
+      "op": "itxn_submit"
+    },
+    "159": {
+      "retsub": true,
+      "op": "retsub"
+    }
+  }
+}
